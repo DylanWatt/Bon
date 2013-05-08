@@ -1,118 +1,75 @@
-# Contributing to HTML5 Boilerplate
+# Contributing to Bootstrap
 
-♥ [HTML5 Boilerplate](http://html5boilerplate.com) and want to get involved?
-Thanks! There are plenty of ways you can help!
+Looking to contribute something to Bootstrap? **Here's how you can help.**
 
 
-## Bugs
 
-A bug is a _demonstrable problem_ that is caused by the code in the
-repository. Good bug reports are extremely helpful - thank you!
+## Reporting issues
 
-Guidelines for bug reports:
+We only accept issues that are bug reports or feature requests. Bugs must be isolated and reproducible problems that we can fix within the Bootstrap core. Please read the following guidelines before opening any issue.
 
-1. **Use the GitHub issue search** &mdash; check if the issue has already been
-   reported.
+1. **Search for existing issues.** We get a lot of duplicate issues, and you'd help us out a lot by first checking if someone else has reported the same issue. Moreover, the issue may have already been resolved with a fix available.
+2. **Create an isolated and reproducible test case.** Be sure the problem exists in Bootstrap's code with a [reduced test case](http://css-tricks.com/reduced-test-cases/) that should be included in each bug report.
+3. **Include a live example.** Make use of jsFiddle or jsBin to share your isolated test cases.
+4. **Share as much information as possible.** Include operating system and version, browser and version, version of Bootstrap, customized or vanilla build, etc. where appropriate. Also include steps to reproduce the bug.
 
-2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
-   latest `master` branch in the repository.
 
-3. **Isolate the problem** &mdash; ideally create a [reduced test
-   case](http://css-tricks.com/6263-reduced-test-cases/) and a live example.
 
-A good bug report shouldn't leave others needing to chase you up for more
-information. Please try to be as detailed as possible in your report. What is
-your environment? What steps will reproduce the issue? What browser(s) and OS
-experience the problem? What would you expect to be the outcome? All these
-details will help people to fix any potential bugs.
+## Key branches
 
-Example:
+- `master` is the latest, deployed version.
+- `gh-pages` is the hosted docs (not to be used for pull requests).
+- `*-wip` is the official work in progress branch for the next release.
 
-> Short and descriptive example bug report title
->
-> A summary of the issue and the browser/OS environment in which it occurs. If
-> suitable, include the steps required to reproduce the bug.
->
-> 1. This is the first step
-> 2. This is the second step
-> 3. Further steps, etc.
->
-> `<url>` (a link to the reduced test case)
->
-> Any other information you want to share that is relevant to the issue being
-> reported. This might include the lines of code that you have identified as
-> causing the bug, and potential solutions (and your opinions on their
-> merits).
 
-**[File a bug report](https://github.com/h5bp/html5-boilerplate/issues/)**
+
+## Notes on the repo
+
+As of v2.0.0, Bootstrap's documentation is powered by Mustache templates and built via `make` before each commit and release. This was done to enable internationalization (translation) in a future release by uploading our strings to the [Twitter Translation Center](http://translate.twttr.com/). Any edits to the docs should be first done in the Mustache files and then recompiled into the HTML.
+
 
 
 ## Pull requests
 
-Good pull requests - patches, improvements, new features - are a fantastic
-help. They should remain focused in scope and avoid containing unrelated
-commits. If your contribution involves a significant amount of work or substantial
-changes to any part of the project, please open an issue to discuss it first.
-
-Make sure to adhere to the coding conventions used throughout a project
-(indentation, accurate comments, etc.). Please update any documentation that is
-relevant to the change you're making.
-
-Please follow this process; it's the best way to get your work included in the
-project:
-
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
-
-   ```bash
-   # Clones your fork of the repo into the current directory in terminal
-   git clone https://github.com/<your-username>/html5-boilerplate.git
-   # Navigate to the newly cloned directory
-   cd html5-boilerplate
-   # Assigns the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/h5bp/html5-boilerplate.git
-   ```
-
-2. If you cloned a while ago, get the latest changes from upstream:
-
-   ```bash
-   git checkout master
-   git pull upstream master
-   ```
-
-3. Create a new topic branch to contain your feature, change, or fix:
-
-   ```bash
-   git checkout -b <topic-branch-name>
-   ```
-
-4. Commit your changes in logical chunks. Please adhere to these [git commit
-   message
-   guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your pull request is unlikely be merged into the main project. Use git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
-   feature to tidy up your commits before making them public.
-
-5. Locally merge (or rebase) the upstream development branch into your topic branch:
-
-   ```bash
-   git pull [--rebase] upstream master
-   ```
-
-6. Push your topic branch up to your fork:
-
-   ```bash
-   git push origin <topic-branch-name>
-   ```
-
-10. [Open a Pull Request](https://help.github.com/articles/using-pull-requests) with a
-    clear title and description.
+- Try to submit pull requests against the latest `*-wip` branch for easier merging
+- Any changes to the docs must be made to the Mustache templates, not just the compiled HTML pages
+- CSS changes must be done in .less files first, never just the compiled files
+- If modifying the .less files, always recompile and commit the compiled files bootstrap.css and bootstrap.min.css
+- Try not to pollute your pull request with unintended changes--keep them simple and small
+- Try to share which browsers your code has been tested in before submitting a pull request
 
 
-## Do not…
 
-Please **do not** use the issue tracker for personal support requests (use
-[StackOverflow](http://stackoverflow.com/questions/tagged/html5boilerplate) or IRC).
+## Coding standards: HTML
 
-Please **do not** derail or troll issues. Keep the
-discussion on topic and respect the opinions of others.
+- Two spaces for indentation, never tabs
+- Double quotes only, never single quotes
+- Always use proper indentation
+- Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags)
+
+
+
+## Coding standards: CSS
+
+- Adhere to the [Recess CSS property order](http://markdotto.com/2011/11/29/css-property-order/)
+- Multiple-line approach (one property and value per line)
+- Always a space after a property's colon (.e.g, `display: block;` and not `display:block;`)
+- End all lines with a semi-colon
+- For multiple, comma-separated selectors, place each selector on it's own line
+- Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes, for consistency and safety (see this [blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values) that can lead to XSS attacks).
+
+
+
+## Coding standards: JS
+
+- No semicolons
+- Comma first
+- 2 spaces (no tabs)
+- strict mode
+- "Attractive"
+
+
+
+## License
+
+By contributing your code, you agree to license your contribution under the terms of the APLv2: https://github.com/twitter/bootstrap/blob/master/LICENSE
