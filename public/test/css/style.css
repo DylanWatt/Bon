@@ -33,7 +33,7 @@ Date: 2012-05-04
 /* ALL */
 /* ----------------------------------------- */
 
-body { background: url(../images/bg.jpg); overflow-x: hidden; overflow-y: hidden; color: #fff; font-family: 'GillSansLight', HeveticaNeue-Light, sans-serif; }
+body { background: url(../images/beige_paper.png); overflow-x: hidden; overflow-y: hidden; color: #fff; font-family: 'GillSansLight', HeveticaNeue-Light, sans-serif; }
 .scrollv { overflow-y: auto !important; }
 
 .wrap { width: 80%; margin: 0 auto; }
