@@ -11,4 +11,14 @@ h1 { font-family: Georgia; font-size: 111px; letter-spacing: -5px; padding-top: 
 h2 { font-family: Helvetica; font-size: 50px; letter-spacing: -2px;   }
 h3 { font-family: Helvetica; font-size: 22px; font-weight: normal; text-align: center; padding-top: 5px;  }
 
+.options
+{
+	width: 100%;
+	margin: 0 auto;
 
+}
+
+.options li 
+{
+	width:100%;
+}
