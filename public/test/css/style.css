@@ -22,4 +22,5 @@ h3 { font-family: Helvetica; font-size: 22px; font-weight: normal; text-align: c
 {
 	width:33%;
 	list-style: none;
+	float: left;
 }
