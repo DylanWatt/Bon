@@ -20,5 +20,6 @@ h3 { font-family: Helvetica; font-size: 22px; font-weight: normal; text-align: c
 
 .options li 
 {
-	width:100%;
+	width:33%;
+	list-style: none;
 }
