@@ -226,6 +226,13 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+  var func = function()
+  {
+    _gaq.push(['_trackEvent', 'Videos', 'Play', 'Gone With the Wind']);
+  }
+
+  window.setTimeout(func, 100);
+
 </script>
 
 
